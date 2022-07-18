@@ -5,6 +5,35 @@
 	<!--웹페이지 제목-->
 	<meta charset="utf-8">
 	<!--한글깨짐방지-->
+	<style>	
+	body {/*노말라이즈*/
+		margin:0px; 
+		padding:0px;
+	}
+		a {/*노말라이즈*/
+			color:inherit; 
+			text-decoration: none;
+		}
+		#active {
+			color:red;
+		}	
+		.saw {
+			color:gray;
+		}	
+		h1 {
+			font-size :3rem;
+			text-align: center;
+			margin:0px;
+			padding:20px;
+			border-bottom:1px solid gray;
+		}
+		ol{
+			border-right:1px solid gray; /*block level emement*/
+			width:100px;
+			margin:0px;
+			padding:20px;
+		}
+	</style>
 </head>
 
 <body>
@@ -15,8 +44,8 @@
 
 	<ol>
 		<!--목차-->
-		<li><a href="1.html">rise</a></li>
-		<li><a href="2.html">side dish</a></li>
+		<li><a href="1.html" class="saw">rise</a></li>
+		<li><a href="2.html" class="saw" id="active">side dish</a></li>
 		<li><a href="3.html">soup</a></li>
 		<li><a href="4.html">Snack</a></li>
 	</ol>
@@ -27,7 +56,7 @@
 		<!--새창에서 링크 열기-->
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odit possimus cumque id, repudiandae quaerat laudantium molestias <u>eveniet</u>
 		<!--밑줄--> reprehenderit, <strong>aspernatur fugiat recusandae ullam error asperiores non facilis alias placeat cum.</strong>
-		<!--진하게--><img src="coding.jpg" width="100%">
+		<!--진하게--><img src="foodmain.jpg" width="100%">
 		<!--이미지-->
 	</p>
 
