@@ -1,5 +1,49 @@
-/*a(선택자, Selector) {
-	color: green; (선언, Declaration)
-	text-decoration(속성, Property): none;(값, Value)
-}*/
-
+body {
+	/*노말라이즈*/
+	margin: 0px;
+	padding: 0px;
+  }
+  a {
+	/*노말라이즈*/
+	color: inherit;
+	text-decoration: none;
+  }
+  #active {
+	color: red;
+  }
+  h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 0px;
+	padding: 20px;
+	border-bottom: 1px solid gray;
+  }
+  ol {
+	border-right: 1px solid gray; /*block level emement*/
+	width: 100px;
+	margin: 0px;
+	padding: 20px;
+  }
+  #grid {
+	/*그리드 활용*/
+	display: grid;
+	grid-template-columns: 150px 1fr;
+  }
+  #grid ol {
+	padding-left: 33px;
+  }
+  #article {
+	padding-left: 25px;
+  }
+  @media (max-width: 800px) {
+	/*미디어 쿼리(사이즈에 따라 반응형 디자인 구현)*/
+	#grid {
+	  display: block;
+	}
+	ol {
+	  border-right: none;
+	}
+	h1 {
+	  border-bottom: none;
+	}
+  }
