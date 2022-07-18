@@ -17,9 +17,6 @@
 		#active {
 			color:red;
 		}	
-		.saw {
-			color:gray;
-		}	
 		h1 {
 			font-size :3rem;
 			text-align: center;
@@ -33,6 +30,16 @@
 			margin:0px;
 			padding:20px;
 		}
+		#grid{ /*그리드 활용*/
+			display: grid;
+			grid-template-columns: 150px 1fr;
+		}
+		#grid ol{
+			padding-left: 33px;
+		}
+		#article {
+			padding-left: 25px;
+		}
 	</style>
 </head>
 
@@ -41,16 +48,16 @@
 			What is my child's meal menu today?
 		</a></h1>
 	<!--제목-->
-
-	<ol>
-		<!--목차-->
-		<li><a href="1.html" class="saw">rise</a></li>
-		<li><a href="2.html" class="saw" id="active">side dish</a></li>
-		<li><a href="3.html">soup</a></li>
-		<li><a href="4.html">Snack</a></li>
-	</ol>
-
-	<h2>my child's meal menu today</h2>
+	<div id="grid">
+		<ol>
+			<!--목차-->
+			<li><a href="1.html">rise</a></li>
+			<li><a href="2.html">side dish</a></li>
+			<li><a href="3.html">soup</a></li>
+			<li><a href="4.html">Snack</a></li>
+		</ol>
+	<div id="article">
+		<h2>my child's meal menu today</h2>
 
 	<p><a href="https://www.10000recipe.com/" target="_blank" title="meal menu" style="color:red;text-decoration:underline">만개의 레시피(참조)</a>
 		<!--새창에서 링크 열기-->
@@ -63,6 +70,8 @@
 	<p style="margin-top:45px;">
 		<!--위칸 간격 벌리기-->Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea sapiente aliquid sint doloremque obcaecati repudiandae provident? Ad commodi temporibus, asperiores sunt, totam quidem placeat ipsum corrupti, ea inventore similique recusandae?
 	</p>
+</div>
+	</div>
 </body>
 
 </html>
