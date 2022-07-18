@@ -3,8 +3,3 @@
 	text-decoration(속성, Property): none;(값, Value)
 }*/
 
-a {
-	color: green;
-	text-decoration: none;
-	color: inherit;
-}

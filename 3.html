@@ -1,19 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>WEB1 - JavaScript</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <h2>JavaScript</h2>
-  <p>
-    JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
-  </p>
-</body>
+  <head>
+    <title>my child's meal menu - soup</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        /*노말라이즈*/
+        margin: 0px;
+        padding: 0px;
+      }
+      a {
+        /*노말라이즈*/
+        color: inherit;
+        text-decoration: none;
+      }
+      #active {
+        color: red;
+      }
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0px;
+        padding: 20px;
+        border-bottom: 1px solid gray;
+      }
+      ol {
+        border-right: 1px solid gray; /*block level emement*/
+        width: 100px;
+        margin: 0px;
+        padding: 20px;
+      }
+      #grid {
+        /*그리드 활용*/
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 33px;
+      }
+      #article {
+        padding-left: 25px;
+      }
+      @media (max-width: 800px) {
+        /*미디어 쿼리(사이즈에 따라 반응형 디자인 구현)*/
+        #grid {
+          display: block;
+        }
+        ol {
+          border-right: none;
+        }
+        h1 {
+          border-bottom: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html"> What is my child's meal menu today? </a></h1>
+    <!--제목-->
+    <div id="grid">
+      <ol>
+        <!--목차-->
+        <li><a href="1.html">rise</a></li>
+        <li><a href="2.html">side dish</a></li>
+        <li><a href="3.html">soup</a></li>
+        <li><a href="4.html">Snack</a></li>
+      </ol>
+      <div id="article">
+        <h2>soup(국)</h2>
+        <p>
+          국은 고기 또는 생선, 채소 등 식자재에 물을 많이 붓고 간을 맞추어 끓인
+          음식이다. 국에서 건더기를 제외한 물은 국물이라 부른다. 온도에 따라
+          더운국과 찬국으로 나눌 수 있으며, 재료에 따라 고기국, 생선국, 채소국
+          등으로 분류하기도 한다. 맑은국과 탁하고 진한 국으로 나누기도 하며,
+          장을 넣은 것은 장국이라 부른다.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

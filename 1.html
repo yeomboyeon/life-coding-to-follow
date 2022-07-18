@@ -1,20 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>WEB1 - HTML</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <h2>HTML</h2>
-  <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
-  <img src="coding.jpg" width="100%">
-  </p><p style="margin-top:45px;">HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
-  </p>
-</body>
+  <head>
+    <title>my child's meal menu - rise</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        /*노말라이즈*/
+        margin: 0px;
+        padding: 0px;
+      }
+      a {
+        /*노말라이즈*/
+        color: inherit;
+        text-decoration: none;
+      }
+      #active {
+        color: red;
+      }
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0px;
+        padding: 20px;
+        border-bottom: 1px solid gray;
+      }
+      ol {
+        border-right: 1px solid gray; /*block level emement*/
+        width: 100px;
+        margin: 0px;
+        padding: 20px;
+      }
+      #grid {
+        /*그리드 활용*/
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 33px;
+      }
+      #article {
+        padding-left: 25px;
+      }
+      @media (max-width: 800px) {
+        /*미디어 쿼리(사이즈에 따라 반응형 디자인 구현)*/
+        #grid {
+          display: block;
+        }
+        ol {
+          border-right: none;
+        }
+        h1 {
+          border-bottom: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html"> What is my child's meal menu today? </a></h1>
+    <!--제목-->
+    <div id="grid">
+      <ol>
+        <!--목차-->
+        <li><a href="1.html">rise</a></li>
+        <li><a href="2.html">side dish</a></li>
+        <li><a href="3.html">soup</a></li>
+        <li><a href="4.html">Snack</a></li>
+      </ol>
+      <div id="article">
+        <h2>rise(밥)</h2>
+        <p>
+          밥은 쌀과 보리 등의 곡식을 물에 넣고 물기가 없어지거나 풀어지지 않도록
+          삶은 음식이다. 보통 밥이라고 하면 쌀로 지은 것을 말하며, 보리와 같은
+          곡식들을 쌀과 섞어 만드는 밥은 보리밥과 잡곡밥으로 부른다. 예전
+          한국에서는 사회적으로 부유한 계층을 제외하고는 쌀밥보다는 콩, 팥, 조,
+          보리 등을 섞은 잡곡밥을 주로 먹었다.[1] 고추장과 같은 장을 담글 때
+          들어가기도 한다. 또한 밥을 국에 푸는데 이를 국밥이라고 한다. 재료 다른
+          곡물을 섞지 않은 밥 쌀밥 흰쌀밥(백미밥) 흑미밥 현미밥 찹쌀밥
+          현미찹쌀밥 멥쌀밥 다른 곡물을 섞은 밥(잡곡밥) 보리밥 꽁보리밥 콩밥
+          기장밥 조밥 메밀밥 녹두밥 옥수수밥 팥밥 수수밥 오곡밥 감자밥 귀리밥
+          밀밥 별미밥 별미밥 또는 별밥은 채소, 해물, 고기와 같은 여러 특수한
+          재료를 섞어서 만들 수 있다.[2] 이를테면 나물밥은 나물 채소를 섞어서
+          만든 밥이다.[3] 일부 대중적인 별미밥은 다음과 같다: 밤밥 비지밥 감자밥
+          곤드레밥 굴밥 계란밥(달걀밥) 조개밥 콩나물밥 무밥 송이밥 쑥밥 김치밥
+          카레밥 영양밥 밥을 이용한 음식 비빔밥 볶음밥 덮밥 김밥 국밥 헛제삿밥
+          주먹밥 쌈밥 약밥 두부밥 묵밥 밥버거 밥전 누룽지 밥을 짓는 용기에 따른
+          분류 돌솥밥 찜밥 가마솥밥 전기밥솥밥
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,19 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>WEB1 - CSS</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <h2>CSS</h2>
-  <p>
-    Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
-  </p>
-</body>
+  <head>
+    <title>my child's meal menu - side dish</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        /*노말라이즈*/
+        margin: 0px;
+        padding: 0px;
+      }
+      a {
+        /*노말라이즈*/
+        color: inherit;
+        text-decoration: none;
+      }
+      #active {
+        color: red;
+      }
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0px;
+        padding: 20px;
+        border-bottom: 1px solid gray;
+      }
+      ol {
+        border-right: 1px solid gray; /*block level emement*/
+        width: 100px;
+        margin: 0px;
+        padding: 20px;
+      }
+      #grid {
+        /*그리드 활용*/
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 33px;
+      }
+      #article {
+        padding-left: 25px;
+      }
+      @media (max-width: 800px) {
+        /*미디어 쿼리(사이즈에 따라 반응형 디자인 구현)*/
+        #grid {
+          display: block;
+        }
+        ol {
+          border-right: none;
+        }
+        h1 {
+          border-bottom: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html"> What is my child's meal menu today? </a></h1>
+    <!--제목-->
+    <div id="grid">
+      <ol>
+        <!--목차-->
+        <li><a href="1.html">rise</a></li>
+        <li><a href="2.html">side dish</a></li>
+        <li><a href="3.html">soup</a></li>
+        <li><a href="4.html">Snack</a></li>
+      </ol>
+      <div id="article">
+        <h2>side dish(반찬)</h2>
+        <p>
+          반찬(飯饌, 문화어: 식찬)은 한국 요리에서 밥과 함께 먹는 부식이다.
+          반찬은 주로 종지보다 조금 넓고 평평한 종발 정도 크기의 그릇이나 접시에
+          담아 낸다. 가장 대표적인 반찬으로는 김치가 있다. 밥과 국은 개인당 한
+          그릇씩 놓고 먹는 데 비하여, 반찬은 주로 식탁 중앙에 늘어놓고 다른
+          사람들과 함께 먹는다. 하지만 사람들이 위생에 대해 민감해지고 생활
+          양식이 변해감에 따라 따로 덜어 먹을 수 있도록 개인 접시를 사용하는
+          경우도 많이 늘었다. 김치 류: 배추김치, 물김치, 나박김치, 동치미,
+          겉절이, 깍두기, 오이소박이, 총각김치, 열무김치, 파김치, 갓김치,
+          고구마줄기김치, 부추 김치 등 나물: 콩나물, 시금치 나물, 미역무침,
+          무생채, 고사리나물, 취나물, 비름나물, 냉이나물, 돌나물, 고구마순나물,
+          가지나물, 도라지나물 등 볶음: 김치볶음, 제육볶음, 오징어채볶음,
+          낙지볶음, 버섯볶음 등 조림: 두부조림, 장조림, 연근조림, 달걀장조림,
+          코다리조림등 찜: 계란찜, 생선찜, 대구찜 아귀찜 등 구이: 조기구이,
+          갈비, 떡갈비, 불고기, 콩나물불고기 등 전&부침개: 고기전, 파전, 김치전,
+          감자전, 생선전, 동그랑땡, 빈대떡 등 완자: 생선완자, 고기완자 등 국:
+          갈비탕, 곰국, 다슬기국, 대구탕, 된장국, 떡국, 만둣국, 재첩국,
+          초두부탕, 추어탕, 미역국, 보신탕, 삼계탕, 백숙, 닭볶음탕, 설렁탕,
+          순댓국, 육개장, 해물탕, 해장국, 수제비, 뭇국, 물곰탕, 곰치국, 옹심이
+          등 찌개: 김치찌개, 된장찌개, 순두부찌개, 부대찌개, 청국장찌개,
+          고추장찌개, 꽁치찌개, 비지찌개 등 전골: 신선로, 해물전골, 불낙전골,
+          쇠고기전골, 만두전골, 두부전골, 버섯전골, 곱창전골, 보신전골 등 튀김:
+          부각, 새우튀김, 김말이튀김, 돈가스, 고로케, 가라아게 등
+          가공식품&인스턴트식품: 스팸, 햄, 소시지, 어묵, 참치 젓갈 류: 어리굴젓,
+          명란젓, 곤쟁이젓, 조기젓, 멸치젓, 새우젓, 연어알젓, 굴젓, 게장,
+          창난젓, 뱅어젓, 꼴뚜기젓, 조개젓, 황석어젓, 대합젓, 홍합젓, 준치젓,
+          솔젓, 정어리젓, 병어젓, 갈치젓, 오징어젓, 토하젓, 장젓, 전복젓 소스
+          류: 간장, 고추장, 들기름, 참기름, 맛다시 등 알: 달걀, 메추리알,
+          오리알, 타조알 기타: 잡채, 우거지, 장아찌, 시래기, 애호박, 김, 수육 등
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

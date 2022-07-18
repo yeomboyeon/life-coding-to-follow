@@ -1,24 +1,86 @@
-<!doctype html>
-<!--미디어 쿼리 활용-->
 <html>
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <style>
-    div{
-      border:10px solid green;
-      font-size: 60px;
-    }
-    @media(max-width:800px) { /*미디어 쿼리(사이즈에 따라 움직임)*/
-    div{
-      display:none;
+  <head>
+    <title>my child's meal menu - Snack</title>
+    <!--웹페이지 제목-->
+    <meta charset="utf-8" />
+    <!--한글깨짐방지-->
+    <style>
+      body {
+        /*노말라이즈*/
+        margin: 0px;
+        padding: 0px;
       }
-    }
-  </style>
-</head>
-<body>
- <div>
-  Responsive
- </div>
-</body>
+      a {
+        /*노말라이즈*/
+        color: inherit;
+        text-decoration: none;
+      }
+      #active {
+        color: red;
+      }
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0px;
+        padding: 20px;
+        border-bottom: 1px solid gray;
+      }
+      ol {
+        border-right: 1px solid gray; /*block level emement*/
+        width: 100px;
+        margin: 0px;
+        padding: 20px;
+      }
+      #grid {
+        /*그리드 활용*/
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 33px;
+      }
+      #article {
+        padding-left: 25px;
+      }
+      @media (max-width: 800px) {
+        /*미디어 쿼리(사이즈에 따라 반응형 디자인 구현)*/
+        #grid {
+          display: block;
+        }
+        ol {
+          border-right: none;
+        }
+        h1 {
+          border-bottom: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="index.html"> What is my child's meal menu today? </a></h1>
+    <!--제목-->
+    <div id="grid">
+      <ol>
+        <!--목차-->
+        <li><a href="1.html">rise</a></li>
+        <li><a href="2.html">side dish</a></li>
+        <li><a href="3.html">soup</a></li>
+        <li><a href="4.html">Snack</a></li>
+      </ol>
+      <div id="article">
+        <h2>Snack</h2>
+        <p>
+          간식(間食)은 끼니와 끼니 사이에 간단히 먹는 군음식이다. 간식은 삼시
+          세끼보다는 적은 양을 먹지만, 많은 양을 먹을 때에는 시간대에 따라
+          아침겸 점심(브런치), 저녁식사 후 먹는 것은 밤참이라고 한다.
+          대한민국에서 간식은 일반적으로 유치원 때부터 먹게 된다. 유치원생들은
+          간식으로 과자, 주스 같은 것을 먹으며, 자라서도 과자, 음료수를 먹는다.
+          이런 식습관을 염려해 학교에서 탄산음료를 없애는 정책이 나오기도
+          했다.[1] 업무상 몸을 많이 움직이는 체력소모가 많은 직군에서는 3끼 식사
+          사이에 간식을 먹거나 고용주가 간식을 제공하기도 한다.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
