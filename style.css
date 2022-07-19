@@ -1,7 +1,8 @@
-body {
+body, ol, ul, li {
 	/*노말라이즈*/
 	margin: 0px;
 	padding: 0px;
+	list-style: none;
   }
   a {
 	/*노말라이즈*/
@@ -20,22 +21,49 @@ body {
   }
   ol {
 	border-right: 1px solid gray; /*block level emement*/
-	width: 100px;
-	margin: 0px;
-	padding: 20px;
+	height: 100%; /*화면 끝까지 나오게*/
+	font-weight: bold; /*글자색 진하게*/
+	font-size: 1rem;
   }
   #grid {
 	/*그리드 활용*/
 	display: grid;
-	grid-template-columns: 150px 1fr;
+	grid-template-columns: 150px 1fr; /*화면 크고 줄일때 나타나고 사라지게 하기*/
   }
   #grid ol {
-	padding-left: 33px;
+	padding-left: 10px;
   }
   #article {
 	padding-left: 25px;
   }
-  @media (max-width: 800px) {
+  .js {
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: blueviolet;
+	/*글자 진하게, 사이즈, 색상*/
+  }
+		.menu-box-1 > ol > li > a {
+	/*2차 메뉴 아이템 텍스트 효과*/
+	display: block;
+	padding: 10px;
+  }
+  .menu-box-1 > ol > li:hover > ul {
+	/*마우스 클릭시 나타내기*/
+	display: block;
+	left: 50%;
+  }
+  .menu-box-1 > ol ul {
+	/*2차 메뉴 아이템 보이지 않게 하기*/
+	display: none;
+	position: relative;
+	width: 100%;
+  }
+  .menu-box-1 {
+	/*마우스 커서 모양*/
+	cursor: pointer;
+  }
+  @media (max-width: 800px) { 
+	/*코드 맨 하단에 위치시키기, 다른 코드에 영향이 감.*/
 	/*미디어 쿼리(사이즈에 따라 반응형 디자인 구현)*/
 	#grid {
 	  display: block;
@@ -46,4 +74,5 @@ body {
 	h1 {
 	  border-bottom: none;
 	}
+
   }
